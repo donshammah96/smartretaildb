@@ -12,6 +12,7 @@ def main():
 
     # Check if the input and output file extensions are valid
     valid_extensions = ('.jpg', '.jpeg', '.png')
+    
     if not (input_filename.lower().endswith(valid_extensions) and output_filename.lower().endswith(valid_extensions)):
         sys.exit("Error: The input and output files must have .jpg, .jpeg, or .png extensions")
 

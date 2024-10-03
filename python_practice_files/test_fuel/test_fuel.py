@@ -22,3 +22,6 @@ def test_error():
         convert("5/3")
     with pytest.raises(ZeroDivisionError):
         convert("1/0")
+
+if __name__ == "__main__":
+    pytest.main()
