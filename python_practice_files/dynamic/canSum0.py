@@ -23,6 +23,11 @@ def canSum(targetSum, numbers):
             return True
     return False
 
+    # m = targetSum
+    # n = len(numbers)
+    # time complexity: O(n^m)
+    # space complexity: O(m)
+    
 def main():
     print(canSum(7, [2, 3]))
     print(canSum(7, [5, 4, 3, 7]))

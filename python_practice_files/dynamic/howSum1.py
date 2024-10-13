@@ -27,7 +27,8 @@ def howSum(targetSum, numbers, memo=None):
 
     # m = targetSum
     # n = len(numbers)
-    # Time complexity O(n * m * m), Space complexity O(m * m)
+    # Time complexity O(n * m * m)
+    # Space complexity O(m * m)
 
 def main():
     print(howSum(7, [5, 4, 3, 7]))

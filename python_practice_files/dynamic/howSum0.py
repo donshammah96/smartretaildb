@@ -28,8 +28,11 @@ def howSum(targetSum, numbers):
         
     return None
 
-# m = targetSum, n = len(numbers)
-# Time complexity O(n^m * m), Space complexity O(m)
+# m = targetSum
+# n = len(numbers)
+#Brute force
+# Time complexity O(n^m * m)
+# Space complexity O(m)
 
 def main():
     print(howSum(7, [5, 4, 3, 7]))

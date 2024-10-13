@@ -18,7 +18,8 @@ def canSum(targetSum, numbers, memo=None):
     memo[targetSum] = False
     return False
 
-    # Time complexity O(n * m), Space complexity O(m)
+    # Time complexity O(n * m)
+    # Space complexity O(m)
 
 def main():
     print(canSum(7, [2, 3]))  # True

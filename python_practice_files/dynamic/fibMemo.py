@@ -1,4 +1,6 @@
-def fib(n, memo = {}):
+def fib(n, memo = None):
+    if memo == None:
+        memo = {}
     if n in memo:
         return memo[n]
     if n <= 2:
@@ -6,6 +8,8 @@ def fib(n, memo = {}):
     memo[n] = fib(n - 1, memo) + fib(n - 2, memo)
     return memo[n]
 
+    #time complexity: O(n)
+    #space complexity: O(n)
 def main():
     print(fib(50))
 
