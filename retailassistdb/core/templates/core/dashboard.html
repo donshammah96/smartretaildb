@@ -5,13 +5,22 @@
 <h1>Dashboard</h1>
 <p>Welcome to the Retail Assist Dashboard!</p>
 <p>You have visited this page {{ visits }} times.</p>
-<a href = "{% url 'core:sales' %}">View Sales</a>
-<a href="{% url 'core:add_customer' %}">Add Customer</a>
-<a href="{% url 'core:add_product' %}">Add Product</a>
-<a href="{% url 'core:add_sale' %}">Add Sale</a>
-<a href="{% url 'core:product_list' %}">View Products</a>
-<a href="{% url 'core:customer_list' %}">View Customers</a>
-<a href="{% url 'core:create_transaction' %}">Create Transaction</a>
-<a href="{% url 'core:transaction_list' %}">View Transactions</a>
-<a href="{% url 'core:update_stock' %}">Update Stock</a>
+<ul>
+    <li><a href="{% url 'core:data_analytics' %}">Data Analytics</a></li>
+    <li><a href="{% url 'core:revenue_report' %}">Revenue Report</a></li>
+    <li><a href="{% url 'core:expense_report' %}">Expense Report</a></li>
+    <li><a href="{% url 'core:product_list' %}">View Products</a></li>
+    <li><a href="{% url 'core:suppliers' %}">View Supliers</a></li>
+    <li><a href="{% url 'core:employees_list' %}">View Employees</a></li>
+    <li><a href="{% url 'core:stock' %}">View Stock</a></li>
+    <li><a href="{% url 'core:sales' %}">View Sales</a></li>
+    <li><a href="{% url 'core:add_product' %}">Add Product</a></li>
+    <li><a href="{% url 'core:add_supplier' %}">Add Supplier</a></li>
+    <li><a href="{% url 'core:add_sale' %}">Add Sale</a></li>
+    <li><a href="{% url 'core:update_stock' %}">Update Stock</a></li>
+    <li><a href="{% url 'core:customers_list' %}">View Customers</a></li>
+    <li><a href="{% url 'core:add_customer' %}">Add Customer</a></li>
+
+
+</ul>
 {% endblock %}
