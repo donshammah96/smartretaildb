@@ -1,0 +1,9 @@
+{% extends 'core/base.html' %}
+{% block title %}Expense Report{% endblock %}
+{% block header %}Expense Report{% endblock %}
+{% block content %}
+<h1>Expense Report</h1>
+<p>Here you can view the expense report.</p>
+<!-- Add your expense report content here -->
+<a href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+{% endblock %}

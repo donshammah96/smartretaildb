@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block title %}Product List{% endblock %}
+{% block header %}Product List{% endblock %}
+{% block content %}
+<h1>Product List</h1>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'core:add_product' %}">Add Product</a>
+<a href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+{% endblock %}

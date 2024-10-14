@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% block title %}Transaction List{% endblock %}
+{% block header %}Transaction List{% endblock %}
+{% block content %}
+<h1>Transaction List</h1>
+
+<!-- Form for adding a new transaction -->
+<form method="post" action="{% url 'core:create_transaction' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Transaction</button>
+</form>
+
+<ul>
+    {% for transaction in transactions %}
+        <li>{{ transaction.id }} - {{ transaction.date }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+{% endblock %}

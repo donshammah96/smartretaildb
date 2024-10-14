@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block title %}Customer List{% endblock %}
+{% block header %}Customer List{% endblock %}
+{% block content %}
+<h1>Customer List</h1>
+<ul>
+    {% for customer in customers %}
+        <li>{{ customer.name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'core:add_customer' %}">Add Customer/a>
+<a href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+{% endblock %}

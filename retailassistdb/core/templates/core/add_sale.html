@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block title %}Add Sale{% endblock %}
+{% block header %}Add Sale{% endblock %}
+{% block content %}
+<h1>Add Sale</h1>
+<form method="post" action="{% url 'core:add_sale' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Sale</button>
+</form>
+<a href="{% url 'core:sales' %}">View Sales</a>
+<a href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+{% endblock %}

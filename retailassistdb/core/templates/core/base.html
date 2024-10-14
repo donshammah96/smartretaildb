@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Retail Assist{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Retail Assist{% endblock %}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'core:product_list' %}">Product List</a></li>
+            <li><a href="{% url 'core:customers_list' %}">Customer List</a></li>
+            <li><a href="{% url 'core:create_transaction' %}">Create Transaction</a></li>
+            <li><a href="{% url 'core:transaction_list' %}">Transaction List</a></li>
+            <li><a href="{% url 'core:dashboard' %}">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+</body>
+</html>

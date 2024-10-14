@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block title %}Suppliers List{% endblock %}
+{% block header %}Suppliers List{% endblock %}
+{% block content %}
+<h1>Suppliers List</h1>
+<ul>
+    {% for supplier in suppliers %}
+        <li>{{ supplier.name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'core:add_supplier' %}">Add Supplier/a>
+<a href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+{% endblock %}

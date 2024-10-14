@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block title %}Stock{% endblock %}
+{% block header %}Stock{% endblock %}
+{% block content %}
+<h1>Stock</h1>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }} - {{ product.stock }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'core:update_stock' %}">Update Stock</a>
+<a href="{% url 'core:dashboard' %}">Back to Dashboard</a>
+{% endblock %}
